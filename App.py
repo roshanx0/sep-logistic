@@ -3,6 +3,7 @@ import pandas as pd
 import joblib
 
 model = joblib.load("model.pkl")
+poly = joblib.load("poly.pkl")
 st.title("Electrical_Bill AC Price Prediction")
 
 units = st.number_input(
@@ -17,6 +18,7 @@ if st.button("Predict"):
         input_data = pd.DataFrame({
             "AC_Units": [units],
         })
-        prediction = model.predict(input_data)
+        input_data_poly = poly.transform(input_data)
+        prediction = model.predict(input_data_poly)
         pred = prediction[0]
         st.success(f"Predicted Price: ₹{pred:.2f} Rs")
