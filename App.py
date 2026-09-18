@@ -16,7 +16,7 @@ units = st.number_input(
 
 if st.button("Predict"):
   valid = True
-  if units< 0 or units > 150:
+  if units <= 0 or units > 150:
     st.error("Units should be between 0 and 150")
     valid = False
   if valid:
