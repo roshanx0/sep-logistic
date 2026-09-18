@@ -9,7 +9,7 @@ st.title("Electrical_Bill AC Price Prediction")
 units = st.number_input(
     "Enter AC Units : ",
     min_value=0.0,
-    max_value=150.0
+    max_value=150.0,
     value=100.0
 )
 
