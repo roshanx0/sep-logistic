@@ -13,7 +13,7 @@ ac_units = st.number_input(
     value=100.0
 )
 fan_units = st.number_input(
-    "Enter AC Units : ",
+    "Enter fan Units : ",
     min_value=0.0,
     max_value=150.0,
     value=100.0
