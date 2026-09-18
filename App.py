@@ -22,10 +22,10 @@ fan_units = st.number_input(
 
 if st.button("Predict"):
   valid = True
-  if ac_units< 0 or ac_units > 150:
+  if ac_units<= 0 or ac_units > 150:
     st.error("Ac Units should be between 0 and 150")
     valid = False
-  if fan_units< 0 or fan_units > 150:
+  if fan_units<= 0 or fan_units > 150:
     st.error(" Fan Units should be between 0 and 150")
     valid = False
   if valid:
