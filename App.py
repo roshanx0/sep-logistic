@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 from sklearn.preprocessing import PolynomialFeatures
+import joblib
 
 model = joblib.load("model2.pkl")
 st.title("Electrical_Bill AC Price Prediction")
